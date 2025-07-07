@@ -3,7 +3,8 @@ import Heading from "../Heading/Heading";
 import Category from "../Category/category";
 import ProductList from "../ProductList/ProductList";
 import Cards from "../Cards/Cards";
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
+// import Button from "../Button/Button";
 
 const Products = () => {
   const categories = ["All", "Fruits", "Vegetables", "Dairy", "Seafood"];
@@ -47,11 +48,18 @@ const Products = () => {
           {/* Tabs End */}
 
           {/* ProductListing Start */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-9 mt-5">{renderCards}</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-9 mt-5">
+            {renderCards}
+          </div>
           {/* ProductListing End */}
 
           <div className="mt-15 mx-auto w-fit">
-            <Button content="View All" />
+            <Link
+              to="/allProducts"
+              className="bg-gradient-to-b from-orange-400 to-orange-500 text-white px-8 py-3 rounded-full md:text-lg text-md hover:scale-105 hover:to-orange-800 transition-all duration-300 cursor-pointer"
+            >
+              View All
+            </Link>
           </div>
         </div>
       </section>
