@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Heading from "../Heading/Heading";
-import Category from "../Category/category";
+import Category from "../Category/Category";
 import ProductList from "../ProductList/ProductList";
 import Cards from "../Cards/Cards";
 import { Link } from "react-router-dom";
